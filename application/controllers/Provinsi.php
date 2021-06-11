@@ -10,7 +10,7 @@ class Provinsi extends CI_Controller {
     }
     public function index()
     {
-        $data['judul'] = 'Data Provinsi';
+        $data['judul'] = 'Halaman Provinsi';
 		$data['provinsi'] = $this->ReadAPI('Provinsi');
 		$data['global'] = $this->ReadAPI();
 		$this->load->view('templates/header', $data);
