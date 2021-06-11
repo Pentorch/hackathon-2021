@@ -13,6 +13,7 @@ class Laporan extends CI_Controller {
     public function index()
     {
         $data['judul'] = 'Halaman Laporan';
+		$data['user'] = $this->Laporan_model->getAllLapor();
 		$this->load->view('templates/header', $data);
 		$this->load->view('laporan/index', $data);
 		$this->load->view('templates/footer');

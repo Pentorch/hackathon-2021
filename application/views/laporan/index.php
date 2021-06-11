@@ -1,9 +1,9 @@
 <div class="col-md-12">
 	<div class="row">
 	<div class="col-md-8 mx-auto">
-	<h1 class="pt-2">Daftar pasien Covid 19</h1>	
-	<table class="table-bordered table-hover mb-0 text-nowrap css-serial mt-2">
-		<thead>
+		<div class="table-responsive">
+			<table class="table table-bordered table-hover mb-0 text-nowrap css-serial">
+				<thead>
 			<tr>
 				<th>NO</th>
 				<th>NAMA</th>
@@ -11,7 +11,7 @@
 				<th>GEJALA</th>
 				<th>PENAGANAN</th>
 				<th>ALAMAT</th>
-				<th>AKSI</th>
+				<th class="text-center">AKSI</th>
 			</tr>
 		</thead>
 		<?php 
@@ -20,13 +20,15 @@
 			<tr>
 				<td><?= $no ;?></td>
 				<td><?= $usr['nama'] ;?></td>
-				<td><?= $usr['nama'] ;?></td>
-				<td><?= $usr['nama'] ;?></td>
-				<td><?= $usr['nama'] ;?></td>
-				<td><?= $usr['nama'] ;?></td>
-				<td><a href="" class="btn btn-success"><i class="fas fa-eye"></i></a><?= $usr['id'] ;?></td>
-				<td><a href="" class="btn btn-primary"><i class="fa fa-pencil"></i></a><?= $usr['id'] ;?></td>
-				<td><a href="" class="btn btn-danger"><i class="fa fa-trash-o"></i></a><?= $usr['id'] ;?></td>
+				<td><?= $usr['umur'] ;?></td>
+				<td><?= $usr['gejala'] ;?></td>
+				<td><?= $usr['penanganan'] ;?></td>
+				<td><?= $usr['alamat'] ;?></td>
+				<td>
+					<a href="<?= $usr['id'] ;?>" class="btn btn-success mr-1"><i class="fas fa-eye"></i></a>
+					<a href="<?= $usr['id'] ;?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+					<a href="<?= $usr['id'] ;?>" class="btn btn-danger ml-1"><i class="fa fa-trash"></i></a>
+				</td>
 			</tr>
 		<?php $no++; } ?>
 
