@@ -23,7 +23,8 @@
   <div class="card-body">
     <h5 class="card-title">MENINGGAL</h5>
     <h5 class="card-text"><?= $value['meninggal'] ;?></h5>
+	<?php }?>
 </div>
 </div>
 </div>
-<?php }?>
+</div>
