@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 	<link rel="stylesheet" href="<?= base_url() ;?>assets/libraries/fontawesome/css/all.min.css">
 	<link rel="stylesheet" href="<?= base_url() ;?>assets/styles/style.css">
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -25,10 +27,10 @@
         <a class="nav-link"  href="<?= base_url() ;?>provinsi">Data Provinsi</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Data Peta Sebaran</a>
+        <a class="nav-link" href="<?= base_url() ;?>peta">Data Peta Sebaran</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Laporan Sigap Covid 19</a>
+        <a class="nav-link" href="<?= base_url() ;?>laporan">Laporan Sigap Covid 19</a>
       </li>
       </li>
       <li class="nav-item">
