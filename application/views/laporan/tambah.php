@@ -13,7 +13,7 @@
 	</div>
 	<div class="form-group">
     <label for="exampleInputUmur">UMUR</label>
-    <input type="text" name="umur" class="form-control" id=umur" placeholder="UMUR">
+    <input type="text" name="umur" class="form-control" id="umur" placeholder="UMUR">
 	</div>
 	<div class="form-group">
     <label for="exampleInputGejala">GEJALA</label>
@@ -28,6 +28,7 @@
     <input type="text" name="alamat" class="form-control" id="alamat" placeholder="ALAMAT LENGKAP">
 	</div>
 	<button type="submit" class="btn btn-primary">SIMPAN</button>
+	<a href="<?= base_url() ;?>laporan" class="btn btn-secondary">KEMBALI</a>
 </form>
 	</div>
 	</div>

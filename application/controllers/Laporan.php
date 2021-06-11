@@ -25,6 +25,9 @@ class Laporan extends CI_Controller {
 		$this->load->view('templates/header', $data);
 		$this->load->view('laporan/tambah', $data);
 		$this->load->view('templates/footer');
+		$this->Laporan_model->tambahDataPasien();
+		redirect('laporan');
+		
 
 	}
 }
