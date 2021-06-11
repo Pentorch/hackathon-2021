@@ -18,6 +18,15 @@ class Laporan extends CI_Controller {
 		$this->load->view('laporan/index', $data);
 		$this->load->view('templates/footer');
     }
+
+	public function tambah()
+	{
+		$data['judul'] = 'Halaman Tambah Data';
+		$this->load->view('templates/header', $data);
+		$this->load->view('laporan/tambah', $data);
+		$this->load->view('templates/footer');
+
+	}
 }
 
 /* End of file Laporan.php and path /application/controllers/Laporan.php */

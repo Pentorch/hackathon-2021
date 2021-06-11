@@ -1,6 +1,8 @@
 <div class="col-md-12">
 	<div class="row">
 	<div class="col-md-8 mx-auto">
+		<a href="<?= base_url() ;?>laporan/tambah" class="btn btn-primary mb-3">Click Laporan</a>
+		<h3 class="text-center">Daftar Pasien Covid 19</h3>
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover mb-0 text-nowrap css-serial">
 				<thead>
