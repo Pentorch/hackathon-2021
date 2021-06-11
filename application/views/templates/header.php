@@ -19,10 +19,10 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto ml-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="/corona/home">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?= base_url() ;?>home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Data Provinsi</a>
+        <a class="nav-link"  href="<?= base_url() ;?>provinsi">Data Provinsi</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Data Peta Sebaran</a>
@@ -41,3 +41,17 @@
     </form>
   </div>
 </nav>
+<div class="col-md-12 pt-4">
+	<div class="row">
+	<div class="col-md-8 mx-auto">
+<div class="jumbotron jumbotron-fluid text-center">
+  <div class="container">
+    <h4 class="display-5">SELAMAT DATANG!,</h4>
+    <p class="lead">Situs resmis Data Digital Covid 19 ,
+		<br>
+			Jangan lupa selalu <b>#ingatpesanibu</b> dan menerapkan <b>3M</b> untuk menekan, mencegah, sekaligus memutus rantai penularan <b>COVID-19</b>.</p>
+  </div>
+</div>
+	</div>
+	</div>
+</div>
