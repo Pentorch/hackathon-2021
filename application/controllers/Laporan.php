@@ -40,6 +40,27 @@ class Laporan extends CI_Controller {
 		}
 
 	}
+	public function edit($id)
+	{
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('umur', 'Umur', 'trim|required');
+		$this->form_validation->set_rules('gejala', 'Gejala', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('penanganan', 'Penanganan', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required|min_length[5]|max_length[12]');
+		if ($this->form_validation->run() == FALSE) {
+		$data['judul'] = 'Halaman Tambah Data';
+		$data['user'] = $this->laporan_model->getLaporById($id);
+		$this->load->view('templates/header', $data);
+		$this->load->view('laporan/edit');
+		$this->load->view('templates/footer');
+		} else {
+			$this->Laporan_model->updateDataPasien();	
+			$this->session->set_flashdata('flash', 'Diupdate');
+			redirect('laporan');
+			
+		}
+
+	}
 }
 
 /* End of file Laporan.php and path /application/controllers/Laporan.php */
