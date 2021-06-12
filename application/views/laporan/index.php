@@ -1,6 +1,15 @@
+
 <div class="col-md-12">
 	<div class="row">
 	<div class="col-md-8 mx-auto">
+		<?php if ($this->session->flashdata('flash')) : ?>
+			<div class="alert alert-success alert-dismissible fade show" role="alert">Data Pasien Covid 19
+			<strong>Berhasil! </strong><?= $this->session->flashdata('flash');?>.
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			</div>
+			<?php endif ;?>
 		<a href="<?= base_url() ;?>laporan/tambah" class="btn btn-primary mb-3">Click Laporan</a>
 		<h3 class="text-center">Daftar Pasien Covid 19</h3>
 		<div class="table-responsive">

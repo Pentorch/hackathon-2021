@@ -22,9 +22,8 @@ class Laporan extends CI_Controller {
 
 	public function tambah()
 	{
-		
 		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[5]|max_length[12]');
-		$this->form_validation->set_rules('umur', 'Umur', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('umur', 'Umur', 'trim|required');
 		$this->form_validation->set_rules('gejala', 'Gejala', 'trim|required|min_length[5]|max_length[12]');
 		$this->form_validation->set_rules('penanganan', 'Penanganan', 'trim|required|min_length[5]|max_length[12]');
 		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required|min_length[5]|max_length[12]');
@@ -34,9 +33,9 @@ class Laporan extends CI_Controller {
 		$this->load->view('laporan/tambah');
 		$this->load->view('templates/footer');
 		} else {
-			# code...
-			// $this->Laporan_model->tambahDataPasien();
-			// redirect('laporan');
+			$this->Laporan_model->tambahDataPasien();	
+			$this->session->set_flashdata('flash', 'Ditambahkan');
+			redirect('laporan');
 			
 		}
 
