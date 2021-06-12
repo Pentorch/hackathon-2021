@@ -7,6 +7,7 @@ class Laporan extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+		$this->load->library('form_validation');
 		$this->load->model('Laporan_model');
 		
     }
@@ -21,13 +22,23 @@ class Laporan extends CI_Controller {
 
 	public function tambah()
 	{
+		
+		$this->form_validation->set_rules('nama', 'Nama', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('umur', 'Umur', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('gejala', 'Gejala', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('penanganan', 'Penanganan', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation->set_rules('alamat', 'Alamat', 'trim|required|min_length[5]|max_length[12]');
+		if ($this->form_validation->run() == FALSE) {
 		$data['judul'] = 'Halaman Tambah Data';
 		$this->load->view('templates/header', $data);
-		$this->load->view('laporan/tambah', $data);
+		$this->load->view('laporan/tambah');
 		$this->load->view('templates/footer');
-		$this->Laporan_model->tambahDataPasien();
-		redirect('laporan');
-		
+		} else {
+			# code...
+			// $this->Laporan_model->tambahDataPasien();
+			// redirect('laporan');
+			
+		}
 
 	}
 }
