@@ -1,4 +1,3 @@
-
 <div class="col-md-12">
 	<div class="row">
 	<div class="col-md-8 mx-auto">
@@ -12,7 +11,6 @@
 			<?php endif ;?>
 		<a href="<?= base_url() ;?>laporan/tambah" class="btn btn-primary mb-3">Click Laporan</a>
 		<h3 class="text-center">Daftar Pasien Covid 19</h3>
-		<div class="table-responsive">
 			<table class="table table-bordered table-hover mb-0 text-nowrap css-serial">
 				<thead>
 			<tr>
@@ -36,9 +34,9 @@
 				<td><?= $usr['penanganan'] ;?></td>
 				<td><?= $usr['alamat'] ;?></td>
 				<td>
-					<a href="<?= $usr['id'] ;?>" class="btn btn-success mr-1"><i class="fas fa-eye"></i></a>
-					<a href="<?= $usr['id'] ;?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
-					<a href="<?= $usr['id'] ;?>" class="btn btn-danger ml-1"><i class="fa fa-trash"></i></a>
+					<a href="<?= base_url() ;?>laporan/detail<?= $usr['id'] ;?>" class="btn btn-success mr-1"><i class="fas fa-eye"></i></a>
+					<a href="<?= base_url() ;?>laporan/edit<?= $usr['id'] ;?>" class="btn btn-primary"><i class="fas fa-edit"></i></a>
+					<a href="<?= base_url() ;?>laporan/hapus<?= $usr['id'] ;?>" class="btn btn-danger ml-1"><i class="fa fa-trash"></i></a>
 				</td>
 			</tr>
 		<?php $no++; } ?>
