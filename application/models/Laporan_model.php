@@ -35,7 +35,7 @@ class Laporan_model extends CI_Model
 	{
 		return $this->db->get_where('tbl_laporan', ['id' => $id])->row_array();
 	}
-	public function hapus($id)
+	public function hapusDataPasien($id)
 	{
 		$this->db->delete('tbl_laporan', ['id' => $id]);
 	}

@@ -59,7 +59,20 @@ class Laporan extends CI_Controller {
 			redirect('laporan');
 			
 		}
-
+	}
+	public function detail($id)
+	{
+		$data['judul'] = 'Halaman Detail Data';
+		$data['user'] = $this->Laporan_model->getLaporById($id);
+		$this->load->view('templates/header', $data);
+		$this->load->view('laporan/detail', $data);
+		$this->load->view('templates/footer');
+	}
+	public function hapus($id)
+	{
+		$this->Laporan_model->hapusDataPasien($id);	
+		$this->session->set_flashdata('flash', 'Dihapus');
+		redirect('laporan');
 	}
 }
 
